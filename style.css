@@ -1,0 +1,166 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+    background: #eee;
+    padding: 0 20px 0 20px;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.side-image{
+    background-image: url("login.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+}
+.row{
+  width:  900px;
+  height:550px;
+  border-radius: 10px;
+  background: #fff;
+  padding: 0px;
+  box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.2);
+}
+.right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.input-box{
+  width: 330px;
+  box-sizing: border-box;
+}
+.input-box header{
+    font-weight: 600;
+    font-size: 30px;
+    text-align: start;
+    margin-bottom: 20px;
+}
+.input-box p{
+    margin-bottom: 15px;
+}
+.input-box p label{
+    text-decoration: none;
+    font-weight: 700;
+    color: rgb(255, 136, 0);
+    transition: .5s;
+}
+.input-box p label:hover{
+    text-decoration: underline;
+    color: orange;
+}
+.input-field{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 10px 0 10px;
+}
+.input{
+    height: 45px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    margin-bottom: 20px;
+    color: #40414a;
+}
+.input-box .input-field label{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-field input:focus ~ label
+   {
+    top: -10px;
+    font-size: 13px;
+  }
+  .input-field input:valid ~ label
+  {
+   top: -10px;
+   font-size: 13px;
+   color: #5d5076;
+ }
+ .input-field .input:focus, .input-field .input:valid{
+    border-bottom: 1px solid #743ae1;
+ }
+ .input-fields{
+display: flex;
+font-size: 12px;
+justify-content: space-between;
+margin-bottom: 40px;
+ }
+ .input-fields a{
+    color: black;
+    text-decoration: none;
+ }
+ .input-fields a:hover{
+    color: black;
+ }
+ .submit{
+    border: none;
+    outline: none;
+    height: 45px;
+    color: #fff;
+    background: rgb(255, 136, 0);
+    border-radius: 50px;
+    transition: .4s;
+ }
+ .submit:hover{
+    background: orange;
+ }
+ .other{
+    text-align: center;
+    font-size: small;
+    margin-top: 25px;
+}
+
+.wrapper .signup{
+	display: none;
+  }
+  #check:checked ~ .signup{
+	display: block;
+    .side-image{
+    background-image: url("signup.png");
+    }
+  }
+  #check:checked ~ .signin{
+	display: none;
+  }
+  #check{
+	display: none;
+  }
+  .error1{
+	display: none;
+	background: #F2DEDE; color: #A94442; padding: 10px; width: 95%; border-radius: 5px; margin: 10px auto;
+  }
+  .error{
+	display: none;
+	background: #F2DEDE; color: #A94442; padding: 10px; width: 95%; border-radius: 5px; margin: 10px auto;
+  }
+
+
+@media only screen and (max-width: 768px){
+    .side-image{
+        border-radius: 10px 10px 0 0;
+    }
+    img{
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 47%;
+    }
+    .row{
+        max-width:420px;
+        width: 100%;
+    }
+}
